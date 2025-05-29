@@ -42,16 +42,16 @@
   {% endblock %}
 </head>
 <body class="hold-transition {% block sidebar_option %} {% endblock %} layout-fixed layout-navbar-fixed">
-<div class="wrapper">
+<div class="wrapper" style="width: 95%;">
 {% include "base/nav-black.html" %}
  <!-- sidebar-->
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{% url 'home' %}" class="brand-link">
-      <img src="{% static "img/mobsf_icon.png" %}" alt="MobSF" class="brand-image"
+      <img src="{% static "img/msmobsf_logo.png" %}" alt="MobSF" class="brand-image"
            style="opacity: .8">
-      <span class="brand-text logo-lg"> | <strong> Mob</strong>SF</span>
+{#      <span class="brand-text logo-lg"> | <strong> Mob</strong>SF</span>#}
     </a>
     {% block sidebar %}
   

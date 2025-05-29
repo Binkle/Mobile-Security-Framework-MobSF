@@ -1,4 +1,3 @@
-
 {% extends "base/base_layout.html" %}
 {% load static %}
  {% block sidebar_option %}
@@ -18,6 +17,131 @@
 
 .selectable_table tr:hover {
     background-color: lightgreen !important;
+}
+
+/* 卡片美化 */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    border: none;
+    padding: 24px 16px;
+}
+
+/* 表格美化 */
+.table {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.table thead th {
+    background: #f5f6fa;
+    color: #333;
+    border-bottom: 2px solid #eaeaea;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+.table tbody tr {
+    background: #fff;
+    transition: background 0.2s;
+}
+.table tbody tr:nth-child(even) {
+    background: #f8fafd;
+}
+.table tbody tr:hover {
+    background: #e6f0fa !important;
+}
+.table td, .table th {
+    border: none;
+    vertical-align: middle;
+    color: #22223b;
+    font-size: 1.05rem;
+}
+
+/* 按钮美化 */
+.btn {
+    border-radius: 8px !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.btn-primary {
+    background: #3b82f6;
+    border: none;
+}
+.btn-success {
+    background: #22c55e;
+    border: none;
+}
+.btn-danger {
+    background: #ef4444;
+    border: none;
+}
+.btn-warning {
+    background: #f59e42;
+    border: none;
+}
+.btn-outline-primary, .btn-outline-info, .btn-outline-secondary {
+    border-radius: 8px !important;
+}
+
+/* 标题美化 */
+.box-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #22223b;
+    letter-spacing: 1px;
+}
+
+/* 分页美化 */
+.pagination {
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.04);
+    border-radius: 10px;
+    background: #fff;
+    padding: 8px 16px;
+}
+.page-link {
+    color: #3b82f6;
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    font-size: 1.08rem;
+    border-radius: 6px !important;
+    margin: 0 2px;
+    transition: background 0.2s, color 0.2s;
+    min-width: 44px;
+    text-align: center;
+}
+.page-item.active .page-link {
+    background: #3b82f6;
+    color: #fff !important;
+    border-radius: 6px !important;
+    box-shadow: 0 2px 8px 0 rgba(59,130,246,0.08);
+    border: none;
+}
+.page-item.disabled .page-link {
+    color: #a0aec0 !important;
+    background: #f0f1f6 !important;
+    border-radius: 6px !important;
+    cursor: not-allowed;
+    border: none;
+    opacity: 1 !important;
+    font-weight: 500;
+}
+.page-link.dropdown-toggle {
+    color: #3b82f6;
+    background: transparent;
+    border: none;
+    font-weight: 500;
+}
+.pagination .dropdown-menu {
+    min-width: 80px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+    font-size: 1rem;
 }
 </style>
 {% endblock %}
@@ -65,22 +189,22 @@
                                   {% if e.FILE_NAME|slice:"-5:" != '.appx' %}
                                     {% if e.FILE_NAME|slice:"-3:" != '.so' %}
                                       {% if e.FILE_NAME|slice:"-2:" != '.a' %}
-                                    <p> <a href="{% url "appsec_dashboard" checksum=e.MD5 %}" class="btn btn-sm btn-outline-primary" role="button"><i class="fas fa-user-shield"></i> MobSF Scorecard</a></p>
+                                    <p> <a href="{% url "appsec_dashboard" checksum=e.MD5 %}" class="btn btn-sm btn-outline-primary" role="button"><i class="fas fa-user-shield"></i> 评分 </a></p>
                                       {% endif %}
                                     {% endif %}
                                     {% endif %}
                                   {% endif %}
-                                  <p><a class="btn btn-primary btn-sm" href="../../../{{ e.ANALYZER }}/{{e.MD5}}/"><i class="fas fa-eye"></i> Static Report</a>
+                                  <p><a class="btn btn-primary btn-sm" href="../../../{{ e.ANALYZER }}/{{e.MD5}}/"><i class="fas fa-eye"></i> 静态扫描报告 </a>
                                   {% if '.apk' == e.FILE_NAME|slice:"-4:" or '.xapk' == e.FILE_NAME|slice:"-5:" or '.apks' == e.FILE_NAME|slice:"-5:" or '.aab' == e.FILE_NAME|slice:"-4:" %}
-                                    <a  class="btn btn-success btn-sm {% if not e.DYNAMIC_REPORT_EXISTS %}disabled{% endif %}" href="{% url "dynamic_report" checksum=e.MD5 %}"><i class="fa fa-mobile"></i> Dynamic Report</a>
+                                    <a  class="btn btn-success btn-sm {% if not e.DYNAMIC_REPORT_EXISTS %}disabled{% endif %}" href="{% url "dynamic_report" checksum=e.MD5 %}"><i class="fa fa-mobile"></i> 动态扫描报告 </a>
                                   {% elif '.ipa' == e.FILE_NAME|slice:"-4:" %}
                                     {% if e.PACKAGE_NAME %}
-                                        <a  class="btn btn-success btn-sm {% if not e.DYNAMIC_REPORT_EXISTS %}disabled{% endif %}" href="{% url "ios_view_report" bundle_id=e.PACKAGE_NAME %}"><i class="fa fa-mobile"></i> Dynamic Report</a>
+                                        <a  class="btn btn-success btn-sm {% if not e.DYNAMIC_REPORT_EXISTS %}disabled{% endif %}" href="{% url "ios_view_report" bundle_id=e.PACKAGE_NAME %}"><i class="fa fa-mobile"></i> 动态扫描报告 </a>
                                     {% endif %}
                                   {% endif %}
                                   </p>
                                 {% else %}
-                                </br><span class="badge bg-warning">scan not completed</span>
+                                </br><span class="badge bg-warning">扫描未完成</span>
                                 {% endif %}
                             </td>
                             <td>{{ e.FILE_NAME }}
@@ -101,17 +225,17 @@
                                 {% endif %}
                             </td>
                             <td>{{ e.MD5 }}</td>
-                            <td>{{ e.TIMESTAMP }}</td>
+                            <td>{{ e.TIMESTAMP|date:"Y-m-d H:i:s" }}</td>
                             <td><p>
                                    <a class="btn btn-outline-primary btn-sm" href="{% url "pdf" checksum=e.MD5%}"><i class="fas fa-file-pdf"></i></a>
                                    <a class="btn btn-outline-info btn-sm" href="../../../{{ e.ANALYZER }}/{{e.MD5}}/?rescan=1"><i class="fas fa-sync-alt"></i></a>
                                    <a class="btn btn-outline-secondary btn-sm" href="{% url "download_binary" checksum=e.MD5%}"><i class="fas fa-download"></i></a>
                                 </p>
                             {% if '.apk' == e.FILE_NAME|slice:"-4:" or '.xapk' == e.FILE_NAME|slice:"-5:" or '.apks' == e.FILE_NAME|slice:"-5:" or '.aab' == e.FILE_NAME|slice:"-4:"%}
-                                <p><a class="diffButton btn btn-warning btn-sm" id="{{ e.MD5 }}_{{ e.FILE_NAME }}"><i class="fas fa-not-equal"></i> Diff or Compare</a>
+                                <p><a class="diffButton btn btn-warning btn-sm" id="{{ e.MD5 }}_{{ e.FILE_NAME }}"><i class="fas fa-not-equal"></i> 差异对比 </a>
                                 </p>
                             {% endif %}
-                            <p> <a class="btn btn-danger btn-sm" id="{{ e.MD5 }}" onclick="delete_scan(this)" href="#"><i class="fa fa-trash"></i> Delete Scan</a> </p>
+                            <p> <a class="btn btn-danger btn-sm" id="{{ e.MD5 }}" onclick="delete_scan(this)" href="#"><i class="fa fa-trash"></i> 删除 </a> </p>
                             </td>
                         </tr>
                     {% endfor %}
@@ -127,7 +251,7 @@
                   </li>   
                   {% else %}
                   <li class="page-item">
-                  <a class="page-link">Previous</a>
+                  <a class="page-link">上一页</a>
                   </li>
                   {% endif %}
       
@@ -149,13 +273,13 @@
                    </li>
                   {% else %}
                   <li class="page-item">
-                    <a class="page-link">Next</a>
+                    <a class="page-link">下一页</a>
                   </li>
                   {% endif %}
                   <li class="page-item">
                     <div class="dropdown">
                         <button class="page-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Items per page
+                          每页
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" href="{% url 'scans_paginated' page_size=5 page_number=page_obj.number %}">5</a>
