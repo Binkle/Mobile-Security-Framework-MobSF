@@ -1,0 +1,34 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "landing/css/home.css" %}">
+<div class="w-100">
+    <div class="pad">
+        <img src="{% static "img/msmobsf_logo.png" %}" alt="MobSF Logo" height="60" width="180" />
+    </div>
+    <div class="d-flex h-100 p-3 mx-auto flex-column">
+        <nav class="nav nav-masthead justify-content-center mt-4">
+            <a class="nav-link {% if request.resolver_match.url_name == 'recent' %}active{% endif %}" href="{% url 'recent' %}">最近扫描</a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">静态扫描</a>
+            <a class="nav-link {% if request.resolver_match.url_name == 'dynamic' %}active{% endif %}" href="{% url 'dynamic' %}">动态分析</a>
+
+{#            <a class="nav-link" href="{% url 'api_docs' %}">API</a>#}
+{#            <a class="nav-link" href="{% url 'about' %}">ABOUT</a>#}
+        </nav>
+        <div class="search-bar-container">
+            <form action="/search" method="GET">
+                <input name="query" type="text" class="form-control form-control-sm" placeholder="搜索">
+            </form>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="user-avatar-container">
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa fa-user-circle" aria-hidden="true"></i> </a>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                <li><a href="#" class="dropdown-item"> <small>{{ request.user.username }} <span class="badge badge-primary"> {% if user.is_staff %} Admin {% else %}{{ request.user.groups.all.0 }} {% endif %}</span></small></a></li>
+                <li class="dropdown-divider"></li>
+                <li><a href="{% url 'change_password' %}" class="dropdown-item"><i class="fa fa-asterisk" aria-hidden="true"></i>  修改密码 </a></li>
+                {% if user.is_staff %}<li><a href="{% url 'users' %}" class="dropdown-item"><i class="fa fa-users" aria-hidden="true"></i> 用户管理 </a></li>{% endif %}
+                <li><a href="{% url 'logout' %}" class="dropdown-item"><i class="fa fa-power-off" aria-hidden="true"></i> 退出登录 </a></li>
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>

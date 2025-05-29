@@ -599,13 +599,13 @@ files = [
 
 [[package]]
 name = "click"
-version = "8.1.8"
+version = "8.2.1"
 description = "Composable command line interface toolkit"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.10"
 files = [
-    {file = "click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2"},
-    {file = "click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a"},
+    {file = "click-8.2.1-py3-none-any.whl", hash = "sha256:61a3265b914e850b85317d0b3109c7f8cd35a670f963866005d6ef1d5175a12b"},
+    {file = "click-8.2.1.tar.gz", hash = "sha256:27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"},
 ]
 
 [package.dependencies]
@@ -712,13 +712,13 @@ files = [
 
 [[package]]
 name = "django"
-version = "5.2"
+version = "5.2.1"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "Django-5.2-py3-none-any.whl", hash = "sha256:91ceed4e3a6db5aedced65e3c8f963118ea9ba753fc620831c77074e620e7d83"},
-    {file = "Django-5.2.tar.gz", hash = "sha256:1a47f7a7a3d43ce64570d350e008d2949abe8c7e21737b351b6a1611277c6d89"},
+    {file = "django-5.2.1-py3-none-any.whl", hash = "sha256:a9b680e84f9a0e71da83e399f1e922e1ab37b2173ced046b541c72e1589a5961"},
+    {file = "django-5.2.1.tar.gz", hash = "sha256:57fe1f1b59462caed092c80b3dd324fd92161b620d59a9ba9181c34746c97284"},
 ]
 
 [package.dependencies]
@@ -818,24 +818,24 @@ dotenv = ["python-dotenv"]
 
 [[package]]
 name = "frida"
-version = "16.7.14"
+version = "17.0.5"
 description = "Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "frida-16.7.14-cp37-abi3-macosx_10_13_x86_64.whl", hash = "sha256:bdcbbfaa553fe59667afce94cc7710798511be7b0704ec47d4ed7ac7edfff2f6"},
-    {file = "frida-16.7.14-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:ba9adf66d7f12c9099e9424911b29cccda4eaf2f79cd8e0e311a7f193b4e79af"},
-    {file = "frida-16.7.14-cp37-abi3-manylinux1_i686.whl", hash = "sha256:ab9eb5651bb8343d196b22120d1ae32472dfd20777c5ca14562de5bf97e1b4b0"},
-    {file = "frida-16.7.14-cp37-abi3-manylinux1_x86_64.whl", hash = "sha256:729e05caadc78243a245e51ad2c7a26071eca19d9103cb11db61ed858ccce57d"},
-    {file = "frida-16.7.14-cp37-abi3-manylinux2014_aarch64.whl", hash = "sha256:7aaeb74cf42c4d77ac006f58edfe2a810fb9d9e6c090c81d6b92c244bfc56227"},
-    {file = "frida-16.7.14-cp37-abi3-manylinux2014_armv7l.whl", hash = "sha256:12778ea59bf00ed054a4f3c832466de307da915547e0c5998d05c93ff8f76cff"},
-    {file = "frida-16.7.14-cp37-abi3-manylinux_2_17_aarch64.whl", hash = "sha256:1fe9acc7fcca63966c894079637e5d166399235044737e604a619809e0b4d915"},
-    {file = "frida-16.7.14-cp37-abi3-manylinux_2_17_armv7l.whl", hash = "sha256:c44d4180f25f7fc98bd1c516b427c0e0635f6455e67b8841854895b3abaa209f"},
-    {file = "frida-16.7.14-cp37-abi3-manylinux_2_5_i686.whl", hash = "sha256:8597f9693af0204b6670115a1208cea4e75a8258a1bda2d25bf630b2d4fc2c10"},
-    {file = "frida-16.7.14-cp37-abi3-manylinux_2_5_x86_64.whl", hash = "sha256:066a7a5fabf1aa27a18579d09e438f9bb632a69dd4f30f5b30f62169285c5ddd"},
-    {file = "frida-16.7.14-cp37-abi3-win32.whl", hash = "sha256:43d909bd30f063e30cbe2978011416358d5a8775cfd8e4a64b580b8a516efc5c"},
-    {file = "frida-16.7.14-cp37-abi3-win_amd64.whl", hash = "sha256:e0e4eb92361b4963f130398ef127e6103c1b903b77bcf6cd0d7c7c6dd604778f"},
-    {file = "frida-16.7.14.tar.gz", hash = "sha256:627ee9583bb7ec279f84810108157498c933a518e46e8729c32f864e61501fd8"},
+    {file = "frida-17.0.5-cp37-abi3-macosx_10_13_x86_64.whl", hash = "sha256:da87f34a309966e54db50ce62419a012788e4100423dbe51001396d38672ef82"},
+    {file = "frida-17.0.5-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:c89631de8e818a0cb427c059a9d533a484493e516211dbec64ed3832a90e9801"},
+    {file = "frida-17.0.5-cp37-abi3-manylinux1_i686.whl", hash = "sha256:0086d07559e460048130ba18d80cbaaeb4fd7f85fe36877de900738b2bc89312"},
+    {file = "frida-17.0.5-cp37-abi3-manylinux1_x86_64.whl", hash = "sha256:ec44226adb567a813289cdc2dde7c708d9509dd2a19ec752b0f65e685a254007"},
+    {file = "frida-17.0.5-cp37-abi3-manylinux2014_aarch64.whl", hash = "sha256:66d2eaeaf2fdedc64b51f4e25bba9f3083438abf7cffeb52889e0fd9845c0a92"},
+    {file = "frida-17.0.5-cp37-abi3-manylinux2014_armv7l.whl", hash = "sha256:fedfbcf3784347ad82b45f967524e32bf624e6a9ccf6a34d6342b24f5ac91281"},
+    {file = "frida-17.0.5-cp37-abi3-manylinux_2_17_aarch64.whl", hash = "sha256:cce0ef4d6b5d0dae038b57975abe587bdf278b4bd03ddc1a0e88edaebb283901"},
+    {file = "frida-17.0.5-cp37-abi3-manylinux_2_17_armv7l.whl", hash = "sha256:2aaa7c096fa5ed21d828d15e9b3577bc58cbfbab6685ca6b6580f49d42ea177b"},
+    {file = "frida-17.0.5-cp37-abi3-manylinux_2_5_i686.whl", hash = "sha256:4c416193727e53b77183b0c1a5a7aef01ba5214475f650bca11dbb3ec75c85e7"},
+    {file = "frida-17.0.5-cp37-abi3-manylinux_2_5_x86_64.whl", hash = "sha256:ccc3a06adc404a954cc93847b0e552fb076ca19e2b3cb5e812f8695b918d86ce"},
+    {file = "frida-17.0.5-cp37-abi3-win32.whl", hash = "sha256:3df73892aa467fa649bd3d1c21b2b9ecead81c223e1251f2098ad85445d88b76"},
+    {file = "frida-17.0.5-cp37-abi3-win_amd64.whl", hash = "sha256:4e08cc282c2e2bba88274c567bd18e3025ec3ad2e11b4bc5e8574e2a408ca809"},
+    {file = "frida-17.0.5.tar.gz", hash = "sha256:da9cb5bd89f84ab27ca8dd0893fec97fd3bf8317b6f60622c36c3aee9fbed67d"},
 ]
 
 [package.dependencies]
@@ -1744,22 +1744,23 @@ test = ["codecov (>=2.0.5)", "hypothesis (>=3.5.3)", "mock (>=1.0.1)", "pytest (
 
 [[package]]
 name = "pylsqpack"
-version = "0.3.20"
+version = "0.3.22"
 description = "Python wrapper for the ls-qpack QPACK library"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "pylsqpack-0.3.20-cp39-abi3-macosx_10_9_x86_64.whl", hash = "sha256:90618ad973a3bd6592decae44b1fdf9099384353e5b3256e6dd0e06f79e0ceb0"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:6e58bfca5d8608d17d37c184569c0f7e51eb61bdc824a0c1444697f5028c1d95"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:77f3ea779b7efaf0af9ab4664088c3c85ee14fe028106e7a9173b85ba9b55d23"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d75efd4eaf0e6ee4f9ad8eecbb77e97d2ea09154db0a805f1e40d1e1340c1843"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:a122c5e2bb69f20077e50f5b3f5ddde0c56f621db93596a8aaa127f27ab44ac4"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:cb6b24c3791e522056962c280e3ef1e0fba74c267ea2151b5434ab797285b023"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-musllinux_1_2_i686.whl", hash = "sha256:8d37eccc118cdd3ad527b49c93534c3d14f5163eba34c21be7ae857fc26c3cc8"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:926bc2102562c76b256d93b19ed209507563a738372c3f089c7d501eceb8b10d"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-win32.whl", hash = "sha256:c384ece3e1e73ed449693e2e6871ab01a6cfaf468659a727e098a669a8a44039"},
-    {file = "pylsqpack-0.3.20-cp39-abi3-win_amd64.whl", hash = "sha256:74e48c8820cd654b64c311627b2b5f960e5f1ea0ae0fd99087f84ca99f5dfe07"},
-    {file = "pylsqpack-0.3.20.tar.gz", hash = "sha256:e2d8128ef1f455c198ce8ead9d70f8aca92533a6ea513481f1e5eb546a2bb834"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-macosx_10_9_x86_64.whl", hash = "sha256:c24a44357302aca0ed3306d603683df875016d52d1b1a52a6b0caae2b723b334"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:8dc07b361132f649d7b6918efc94f5a99a9cb3b09736517dd764b34e6875df32"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8f4d0741ce866ff12d5b428a999b73260d248fdb368565c5b4280bce408cd93c"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a67ed5f7739b9e8ab0fb54cfa8f1475b240454b7806d9b38a526e611c5f14d0c"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:44ed9ecfde1f400e7e52ac5fc93936602a2257510e68430cd9da41e296d35848"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:3ccfa072d5dd96236f274ad62604dee4d09fa2a8f805e9b41fc436f843e93064"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-musllinux_1_2_i686.whl", hash = "sha256:fd4eda3aca5b4a3033ce07cb7efb593cb73a5b327f628aa88528beac42fac397"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:8e33c9625c3cbfe3a50ccddab60d2f5d13aaacce1682577eadfcab747b75f141"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-win32.whl", hash = "sha256:5fed26bd2021ef2bd72d81a3c4e2f85cf60bc53d6b994757d87a2bffee86b174"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-win_amd64.whl", hash = "sha256:cf24e7509564bc08d2f33bf36eb9370b039814d18d5a29d162277e6f0dfadaaa"},
+    {file = "pylsqpack-0.3.22-cp39-abi3-win_arm64.whl", hash = "sha256:d72287b2519df1fae147485123689b416ac39c37c3a95429835a3ca4c0722602"},
+    {file = "pylsqpack-0.3.22.tar.gz", hash = "sha256:b67f711b3c8370d9f40f7f7f536aa6018d8900fa09fa49f72f0c3f13886cecda"},
 ]
 
 [[package]]

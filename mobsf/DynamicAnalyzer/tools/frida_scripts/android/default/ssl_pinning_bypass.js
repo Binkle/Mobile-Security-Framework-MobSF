@@ -251,7 +251,7 @@ Java.perform(function() {
     }
     /* Appmattus */
     try {
-        /* Certificate Transparency Bypass Ajin Abraham - opensecurity.in */
+        /* Certificate Transparency Bypass MS - opensecurity.in */
         Java.use('com.babylon.certificatetransparency.CTInterceptorBuilder').includeHost.overload('java.lang.String').implementation = function(host) {
             send('[SSL Pinning Bypass] Bypassing Certificate Transparency check');
             return this.includeHost('nonexistent.domain');

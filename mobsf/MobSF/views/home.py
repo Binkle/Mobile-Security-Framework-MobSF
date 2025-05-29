@@ -308,7 +308,7 @@ def recent_scans(request, page_size=10, page_number=1):
         entry['DYNAMIC_REPORT_EXISTS'] = report_file.exists()
         entries.append(entry)
     context = {
-        'title': 'Recent Scans',
+        'title': '最近扫描',
         'entries': entries,
         'version': settings.MOBSF_VER,
         'page_obj': page_obj,

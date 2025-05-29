@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "mobsf"
-version = "4.3.3"
-description = "Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing static and dynamic analysis."
+version = "1.0.0"
+description = "马上移动安全框架（MS Mobile Security Framework，简称MSMobSF）是一款自动化的一站式移动应用（支持Android/iOS/Windows平台）渗透测试、恶意软件分析与安全评估框架，支持执行静态及动态分析。"
 keywords = ["mobsf", "mobile security framework", "mobile security", "security tool", "static analysis", "dynamic analysis", "malware analysis"]
-authors = ["Ajin Abraham <ajin@opensecurity.in>"]
+authors = ["MS"]
 license = "GPL-3.0-only"
 readme = "README.md"
 repository = "https://github.com/MobSF/Mobile-Security-Framework-MobSF"

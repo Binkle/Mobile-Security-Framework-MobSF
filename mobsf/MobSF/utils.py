@@ -111,7 +111,7 @@ def print_version():
     """Print MobSF Version."""
     logger.info(settings.BANNER)
     ver = settings.MOBSF_VER
-    logger.info('Author: Ajin Abraham | opensecurity.in')
+    logger.info('Author: MS | opensecurity.in')
     mobsf_api_key = api_key(settings.MOBSF_HOME)
     if platform.system() == 'Windows':
         logger.info('Mobile Security Framework %s', ver)

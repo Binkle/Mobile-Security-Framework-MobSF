@@ -2,12 +2,12 @@
 FROM python:3.12-slim-bookworm
 
 LABEL \
-    name="MobSF" \
-    author="Ajin Abraham <ajin25@gmail.com>" \
-    maintainer="Ajin Abraham <ajin25@gmail.com>" \
+    name="MSMobSF" \
+    author="MS" \
+    maintainer="MS" \
     contributor_1="OscarAkaElvis <oscar.alfonso.diaz@gmail.com>" \
     contributor_2="Vincent Nadal <vincent.nadal@orange.fr>" \
-    description="Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing static and dynamic analysis."
+    description="马上移动安全框架（MS Mobile Security Framework，简称MSMobSF）是一款自动化的一站式移动应用（支持Android/iOS/Windows平台）渗透测试、恶意软件分析与安全评估框架，支持执行静态及动态分析。"
 
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=en_US.UTF-8 \

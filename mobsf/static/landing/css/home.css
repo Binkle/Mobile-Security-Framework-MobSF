@@ -248,6 +248,49 @@ progress::-webkit-progress-value {
 /* Logo padding ^*/
 
 .pad {
-  padding-right: 50px;
-  padding-left: 50px;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+}
+
+/* 搜索框容器样式 */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 18px;
+}
+
+.search-bar-container form {
+  width: 450px;
+}
+
+.search-bar-container input[type="text"] {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  font-size: 1.1rem;
+}
+
+/* 头像容器样式 */
+.user-avatar-container {
+  position: fixed;
+  top: 18px;
+  right: 32px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-avatar-container .nav-link {
+  color: #fff;
+  font-size: 2rem;
+  padding: 0;
+}
+
+.user-avatar-container .dropdown-menu {
+  margin-top: 8px;
+  text-align: left;
 }
