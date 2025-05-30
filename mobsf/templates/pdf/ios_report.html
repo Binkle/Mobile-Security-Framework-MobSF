@@ -58,7 +58,7 @@
       <div class="container">
       <table class="basic no_border">
       <tr class="no_border">
-        <td class="no_border"><h3>File Name:</h3></td>
+        <td class="no_border"><h3>文件名:</h3></td>
         <td class="no_border"><h3>{{file_name}}</h3></td>
       </tr>
       <tr>
@@ -169,18 +169,18 @@
     <article id="contents">
 
       
-      <h2><i class="fas fa-box-open"></i> FILE INFORMATION</h2>
+      <h2><i class="fas fa-box-open"></i> 文件信息</h2>
 
-      <h5>File Name:</h5> {{ file_name }}</br>
-      <h5>Size: </h5> {{ size }}</br>
+      <h5>文件名:</h5> {{ file_name }}</br>
+      <h5>大小: </h5> {{ size }}</br>
       <h5>MD5:</h5> {{ md5 }}</br>
       <h5>SHA1:</h5> {{ sha1 }}</br>
       <h5>SHA256:</h5> {{ sha256 }}</br>
      
 {% if app_type not in 'Dylib,A' %}
-      <h2><i class="fas fa-info"></i> APP INFORMATION</h2>
+      <h2><i class="fas fa-info"></i> APP 信息</h2>
 
-      <h5>App Name:</h5> {{ app_name }}</br>
+      <h5>APP 名称:</h5> {{ app_name }}</br>
       <h5>App Type:</h5> {{ app_type }}</br>
       <h5>Identifier:</h5> {{ bundle_id }}</br>
       <h5>SDK Name:</h5> {{ sdk_name }}</br>
@@ -234,7 +234,7 @@
         {% endif %}
 
       {% if permissions %}
-      <h2><i class="fa fa-list"></i> APPLICATION PERMISSIONS</h2>
+      <h2><i class="fa fa-list"></i> 应用程序权限</h2>
 
             <table class="basic">
               <thead>
@@ -715,7 +715,7 @@
 
     {% if app_type not in 'Dylib,A' %}
     {% if code_analysis  %}
-      <h2><i class="fas fa-code"></i> CODE ANALYSIS</h2>
+      <h2><i class="fas fa-code"></i>代码分析</h2>
       {% if code_analysis and 'summary' in code_analysis and code_analysis.summary|length > 0 %}
       <span class="danger">HIGH: </span>
       <h5 class="description-header">{{ code_analysis.summary.high }}</h5> | 

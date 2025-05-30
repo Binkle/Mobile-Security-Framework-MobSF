@@ -3,7 +3,7 @@
       sidebar-collapse
 {% endblock %}
 {% block content %}
-<div class="content-wrapper">
+<div class="content-wrapper" style="color: #22223b;">
   <div class="content-header">
   </div>
    <div class="container-fluid">
@@ -22,7 +22,8 @@
                         <i style="color:#A4C639;" class="fab fa-android fa-10x d-flex justify-content-center"></i>
                         <div class="card-body">
                           <h4 class="d-flex justify-content-center">Android 动态分析</h4>
-                          <p class="card-text">执行Android应用动态分析.</p>
+{#                          <p class="card-text">执行Android应用动态分析.</p>#}
+                            <p></p>
                           <a href="{% url 'dynamic_android' %}" class="btn btn-primary d-flex justify-content-center">Android 动态分析</a>
                         </div>
                       </div>
@@ -31,7 +32,8 @@
                         <i style="color:#cccccc;" class="fab fa-apple fa-10x d-flex justify-content-center"></i>
                         <div class="card-body">
                           <h4 class="d-flex justify-content-center">iOS 动态分析</h4>
-                          <p class="card-text">执行iOS应用动态分析.</p>
+{#                          <p class="card-text">执行iOS应用动态分析.</p>#}
+                            <p></p>
                           <a href="{% url 'dynamic_ios' %}" class="btn btn-primary d-flex justify-content-center">iOS 动态分析</a>
                         </div>
                       </div>

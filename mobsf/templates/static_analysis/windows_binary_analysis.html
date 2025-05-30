@@ -28,7 +28,7 @@
         <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-          <a href="#" class="d-block">Static Analyzer</a>
+          <a href="#" class="d-block">静态分析</a>
         </div>
       </div>
 
@@ -40,7 +40,7 @@
             <a href="#information" class="nav-link">
               <i class="nav-icon fas fa-info-circle"></i>
               <p>
-                Information
+                 信息
               </p>
             </a>
           </li>
@@ -48,7 +48,7 @@
             <a href="#scan_options" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
-                Scan Options
+                扫描项
               </p>
             </a>
           </li>
@@ -134,8 +134,8 @@
               <h5 class="card-title"></h5>
                 <div class="row">
                 <div class="col-2">
-                  <p><strong><i class="fas fa-info"></i> APP INFORMATION </strong></p>
-                    <span class="badge bg-primary">App Name</span>
+                  <p><strong><i class="fas fa-info"></i> APP 信息 </strong></p>
+                    <span class="badge bg-primary">APP 名称</span>
                     {{ app_name }} <br/>
                     <span class="badge bg-primary">Publisher</span>
                     {{ publisher_name }} <br/>
@@ -152,10 +152,10 @@
                     {% endif %}
                 </div>
                 <div class="col-5">
-                  <p><strong><i class="fas fa-box-open"></i> FILE INFORMATION </strong></p>                         
-                      <span class="badge bg-primary">File Name</span>
+                  <p><strong><i class="fas fa-box-open"></i> 文件信息 </strong></p>
+                      <span class="badge bg-primary">文件名</span>
                       {{ file_name }} <br/>
-                      <span class="badge bg-primary">Size</span>
+                      <span class="badge bg-primary">大小</span>
                       {{ size }} <br/>
                       <span class="badge bg-primary">MD5</span>
                       {{ md5 }} <br/>
@@ -208,7 +208,7 @@
             <div class="card">
               <div class="card-body">
                 <p>
-                <strong><i class="fas fa-cog"></i> SCAN OPTIONS</strong>
+                <strong><i class="fas fa-cog"></i> 扫描选项</strong>
                 </p>
                 <p align="center">
                    <a href="{% url 'static_analyzer_windows' checksum=md5 %}?rescan=1" class="btn btn-info" role="button"><i class="fa fa-sync"></i> Rescan</a>

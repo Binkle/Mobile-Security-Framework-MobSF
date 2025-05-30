@@ -289,7 +289,7 @@ def analysis(checksum, app_dir, config, is_debuggable, src_type):
         netsec['network_findings'] = finds
         netsec['network_summary'] = summary
     except Exception as exp:
-        msg = 'Performing Network Security Analysis'
+        msg = '正在执行网络安全分析'
         logger.exception(msg)
         append_scan_status(checksum, msg, repr(exp))
     return netsec

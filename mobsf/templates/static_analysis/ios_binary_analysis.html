@@ -36,7 +36,7 @@
         <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-          <a href="#" class="d-block">Static Analyzer</a>
+          <a href="#" class="d-block">静态分析</a>
         </div>
       </div>
 
@@ -48,7 +48,7 @@
             <a href="#information" class="nav-link">
               <i class="nav-icon fas fa-info-circle"></i>
               <p>
-                Information
+                 信息
               </p>
             </a>
           </li>
@@ -56,7 +56,7 @@
             <a href="#scan_options" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
-                Scan Options
+                扫描项
               </p>
             </a>
           </li>
@@ -73,7 +73,7 @@
             <a href="#permissions" class="nav-link">
               <i class="nav-icon fas fa-list"></i>
               <p>
-                Permissions
+                权限
               </p>
             </a>
           </li>
@@ -82,7 +82,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-shield-alt"></i>
               <p>
-                Security Analysis
+                安全分析
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -136,7 +136,7 @@
             <a href="#file_analysis" class="nav-link">
               <i class="nav-icon fa fa-file"></i>
               <p>
-                File Analysis
+                文件分析
               </p>
             </a>
              </li>
@@ -303,7 +303,7 @@
               <h5 class="card-title"></h5>
                 <div class="row">
                 <div class="col-2">
-                  <p><strong><i class="fas fa-check-double"></i> APP SCORES</strong></p>
+                  <p><strong><i class="fas fa-check-double"></i>APP 评分</strong></p>
               {% if app_type not in 'Dylib,A' %}
                   <img id="app_icon" src="{% if not appstore_details.error %}{{appstore_details.icon}}{% elif icon_path %}/download/{{ icon_path }}{% else %}{% static 'img/no_icon.png' %}{% endif %}"/>
                   <p>
@@ -330,10 +330,10 @@
                 {% endif %}
                 </div>
                 <div class="col-4">
-                  <p><strong><i class="fas fa-box-open"></i> FILE INFORMATION </strong></p>                         
-                  <span class="badge bg-primary">File Name</span>
+                  <p><strong><i class="fas fa-box-open"></i> 文件信息 </strong></p>
+                  <span class="badge bg-primary">文件名</span>
                   {{ file_name }}<br/>
-                  <span class="badge bg-primary">Size</span>
+                  <span class="badge bg-primary">大小</span>
                   {{ size }}<br/>
                   <span class="badge bg-primary">MD5</span>
                   {{ md5 }}<br/>
@@ -344,8 +344,8 @@
                 </div>
                 {% if app_type not in 'Dylib,A' %}
                 <div class="col-3">
-                  <p><strong><i class="fas fa-info"></i> APP INFORMATION </strong></p>                                       
-                  <span class="badge bg-primary">App Name</span>
+                  <p><strong><i class="fas fa-info"></i> APP 信息 </strong></p>
+                  <span class="badge bg-primary">APP 名称</span>
                   {{ app_name }}<br/>
                   <span class="badge bg-primary">App Type</span>
                   {{ app_type }}<br/>                               
@@ -448,7 +448,7 @@
             <div class="card">
               <div class="card-body">
                 <p>
-                <strong><i class="fas fa-cog"></i> SCAN OPTIONS</strong>
+                <strong><i class="fas fa-cog"></i> 扫描选项</strong>
                 </p>
                  <a role="button" class="btn btn-info" href="{% url 'static_analyzer_ios' checksum=md5 %}?rescan=1" ><i class="fa fa-sync"></i> Rescan</a>
                  <a id="supbtn" onclick="list_suppressions()" role="button" class="btn btn-primary" data-target="#sup_list" data-toggle="modal" href="#"><i class="fa fa-table"></i> Manage Suppressions</a>
@@ -546,7 +546,7 @@
         <div class="card">
           <div class="card-body">
              <p>
-             <strong><i class="fa fa-list"></i> APPLICATION PERMISSIONS</strong>
+             <strong><i class="fa fa-list"></i> 应用程序权限</strong>
              <p>
              {% if permissions %}
              <div class="table-responsive">
@@ -554,7 +554,7 @@
 
                   <thead>
                       <tr>
-                          <th>PERMISSIONS</th>
+                          <th>权限</th>
                           <th>STATUS</th>
                           <th>INFO</th>
                           <th>REASON IN MANIFEST</th>
@@ -587,7 +587,7 @@
            </div>
             {% else %}
               <p>
-                No Permissions required.
+                无需权限.
             </p>
             {% endif %}
           </div>
@@ -1173,7 +1173,7 @@
         <div class="card">
           <div class="card-body">
             <p>
-             <strong><i class="fa fa-file"></i> FILE ANALYSIS</strong>
+             <strong><i class="fa fa-file"></i> 文件分析</strong>
              </p>
               <div class="table-responsive">
                  <table class="table table-bordered table-hover table-striped">

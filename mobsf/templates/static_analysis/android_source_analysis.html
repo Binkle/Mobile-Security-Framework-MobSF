@@ -29,7 +29,7 @@
         <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="info">
-          <a href="#" class="d-block">Static Analyzer</a>
+          <a href="#" class="d-block">静态分析</a>
         </div>
       </div>
 
@@ -41,7 +41,7 @@
             <a href="#information" class="nav-link">
               <i class="nav-icon fas fa-info-circle"></i>
               <p>
-                Information
+                 信息
               </p>
             </a>
           </li>
@@ -49,7 +49,7 @@
             <a href="#scan_options" class="nav-link">
               <i class="nav-icon fas fa-cog"></i>
               <p>
-                Scan Options
+                扫描项
               </p>
             </a>
           </li>
@@ -57,7 +57,7 @@
             <a href="#permissions" class="nav-link">
               <i class="nav-icon fas fa-list"></i>
               <p>
-                Permissions
+                权限
               </p>
             </a>
           </li>
@@ -73,7 +73,7 @@
             <a href="#browsable" class="nav-link">
               <i class="nav-icon fas fa-clone"></i>
               <p>
-                Browsable Activities
+                浏览器行为
               </p>
             </a>
           </li>
@@ -82,7 +82,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-shield-alt"></i>
               <p>
-                Security Analysis
+                安全分析
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -91,7 +91,7 @@
                 <a href="#network_security" class="nav-link">
                   <i class="nav-icon fas fa-lock"></i>
                   <p>
-                    Network Security
+                    网络安全
                   </p>
                 </a>
               </li>
@@ -116,7 +116,7 @@
               <li class="nav-item">
                 <a href="#file_analysis" class="nav-link">
                   <i class="fa fa-file nav-icon"></i>
-                  <p>File Analysis</p>
+                  <p>文件分析</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -306,7 +306,7 @@
               <h5 class="card-title"></h5>
                 <div class="row">
                 <div class="col-2">
-                  <p><strong><i class="fas fa-check-double"></i> APP SCORES</strong></p>
+                  <p><strong><i class="fas fa-check-double"></i>APP 评分</strong></p>
                   <img id="app_icon" src="{% if icon_path %}/download/{{ icon_path }}{% else %}{% static 'img/no_icon.png' %}{% endif %}"/>
                   <p>
                   {% if average_cvss %}
@@ -323,10 +323,10 @@
 
                 </div>
                 <div class="col-6">
-                  <p><strong><i class="fas fa-box-open"></i> FILE INFORMATION </strong></p>                         
-                  <span class="badge bg-primary">File Name</span>
+                  <p><strong><i class="fas fa-box-open"></i> 文件信息 </strong></p>
+                  <span class="badge bg-primary">文件名</span>
                   {{ file_name }}<br/>
-                  <span class="badge bg-primary">Size</span>
+                  <span class="badge bg-primary">大小</span>
                   {{ size }}<br/>
                   <span class="badge bg-primary">MD5</span>
                   {{ md5 }}<br/>
@@ -336,10 +336,10 @@
                   {{ sha256 }}<br/>
                 </div>
                 <div class="col-4">
-                  <p><strong><i class="fas fa-info"></i> APP INFORMATION </strong></p>                                       
-                  <span class="badge bg-primary">App Name</span>
+                  <p><strong><i class="fas fa-info"></i> APP 信息 </strong></p>
+                  <span class="badge bg-primary">APP 名称</span>
                   {{ app_name }}<br/>                                   
-                  <span class="badge bg-primary">Package Name</span>
+                  <span class="badge bg-primary">包名</span>
                   {{ package_name }}<br/>
                   <span class="badge bg-primary">Main Activity</span>
                   {{ main_activity }}<br/>
@@ -494,7 +494,7 @@
             <div class="card">
               <div class="card-body">
                 <p>
-                <strong><i class="fas fa-cog"></i> SCAN OPTIONS</strong>
+                <strong><i class="fas fa-cog"></i> 扫描选项</strong>
                 </p>
                 <p align="center">
                   <a href="{% url 'static_analyzer' checksum=md5 %}?rescan=1" class="btn btn-info" role="button"><i class="fa fa-sync"></i> Rescan</a>
@@ -520,7 +520,7 @@
         <div class="card">
           <div class="card-body">
              <p>
-             <strong><i class="fa fa-list"></i> APPLICATION PERMISSIONS</strong>
+             <strong><i class="fa fa-list"></i> 应用程序权限</strong>
              <p>
              <div class="table-responsive">
                   <table id="table_permissions" class="table table-bordered table-hover table-striped">
@@ -644,7 +644,7 @@
         <div class="card">
           <div class="card-body">
               <p>
-             <strong><i class="fas fa-clone"></i> BROWSABLE ACTIVITIES</strong>
+             <strong><i class="fas fa-clone"></i> 浏览器行为</strong>
              </p>
               <div class="table-responsive">
                 <table id="table_browsable" class="table table-bordered table-hover table-striped">
@@ -724,7 +724,7 @@
         <div class="card">
           <div class="card-body">
             <p>
-             <strong><i class="fas fa-lock"></i> NETWORK SECURITY</strong>
+             <strong><i class="fas fa-lock"></i> 网络安全</strong>
              </p>
               <div class="table-responsive">
                 {% if network_security and 'network_summary' in network_security and network_security.network_summary|length > 0%}
@@ -927,7 +927,7 @@
         <div class="card">
           <div class="card-body">
             <p>
-             <strong><i class="fas fa-code"></i> CODE ANALYSIS</strong>
+             <strong><i class="fas fa-code"></i>代码分析</strong>
              </p>
               <div class="table-responsive">
                 {% if code_analysis and 'summary' in code_analysis and code_analysis.summary|length > 0 %}
@@ -1138,7 +1138,7 @@
         <div class="card">
           <div class="card-body">
             <p>
-             <strong><i class="fa fa-file"></i> FILE ANALYSIS</strong>
+             <strong><i class="fa fa-file"></i> 文件分析</strong>
              </p>
               <div class="table-responsive">
                 <table id="table_file" class="table table-bordered table-hover table-striped">

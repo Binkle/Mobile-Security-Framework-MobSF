@@ -98,6 +98,6 @@ def ios_list_files(md5_hash, src, mode):
             'special_files': sfiles,
         }
     except Exception as exp:
-        msg = 'iOS File Analysis'
+        msg = 'iOS 文件分析'
         logger.exception(msg)
         append_scan_status(md5_hash, msg, repr(exp))
