@@ -43,7 +43,12 @@
 </head>
 <body class="hold-transition {% block sidebar_option %} {% endblock %} layout-fixed layout-navbar-fixed">
 <div class="wrapper" style="width: 95%;">
+
+{% if request.resolver_match.url_name in 'home recent dynamic' %}
 {% include "base/nav-black.html" %}
+{% else %}
+{% include "base/nav.html" %}
+{% endif %}
  <!-- sidebar-->
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">

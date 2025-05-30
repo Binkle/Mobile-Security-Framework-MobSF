@@ -75,7 +75,7 @@ def login_view(request):
     else:
         form = AuthenticationForm()
     context = {
-        'title': 'Sign In',
+        'title': '登录',
         'version': settings.VERSION,
         'next': redirect_url,
         'form': form,
@@ -102,16 +102,16 @@ def change_password(request):
             update_session_auth_hash(request, user)
             messages.success(
                 request,
-                'Your password was successfully updated!')
+                '密码更新成功!')
             return redirect('change_password')
         else:
             messages.error(
                 request,
-                'Please correct the error below.')
+                '请更正以下错误.')
     else:
         form = PasswordChangeForm(request.user)
     context = {
-        'title': 'Change Password',
+        'title': '修改密码',
         'version': settings.VERSION,
         'form': form,
     }

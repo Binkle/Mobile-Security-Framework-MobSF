@@ -130,9 +130,7 @@ def generic_compare(request,
     if not (db_entry.exists() and db_entry2.exists()):
         return print_n_send_error_response(
             request,
-            'Currently you can only diff/compare android apps. '
-            'One of the app has not completed static analysis or'
-            ' they are not both android APK/ZIP.',
+            '当前仅支持对Android应用进行差异比对。可能原因：其中一个应用尚未完成静态分析；二者文件类型非均为Android APK/ZIP 格式。',
             api,
         )
 

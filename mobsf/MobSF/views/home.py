@@ -558,7 +558,7 @@ def delete_scan(request, api=False):
                 if not (et.completed_at or max_time_passed):
                     # Queue is in progress, cannot delete the task
                     return send_response(
-                        {'deleted': 'A scan can only be deleted after it is completed'},
+                        {'deleted': '只有扫描完成后可删除'},
                         api)
         # Delete all related DB entries
         EnqueuedTask.objects.filter(checksum=md5_hash).all().delete()

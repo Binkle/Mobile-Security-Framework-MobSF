@@ -154,13 +154,11 @@
             <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
-                
-
                  <div class="box">
         <div class="box-header with-border">
             <h3 class="box-title"><i class="fa fa-rocket"></i> 最近扫描</h3>
             {% if async_scans %}
-            <p class="lead">View scan progress in the <strong><a href="{% url 'list_tasks' %}">Scan Queue</a></strong></p>
+            <p class="lead">在<strong><a href="{% url 'list_tasks' %}">扫描队列</a></strong>中查看进度</p>
             {% endif %}
         </div>
 
@@ -351,9 +349,9 @@
     function diff_select(item) {
 
         Swal.fire({
-            title: '<strong>Select App to Compare</strong>',
+            title: '<strong>选择要对比的 APP</strong>',
             type: 'info',
-            text: 'Please select the second scan result for comparison',
+            text: '请选择其他扫描结果进行对比',
             timer: 10000
         });
         diff_first_md5 = item.attr('id').slice(0, 32);
@@ -387,15 +385,15 @@
         diff_second_name = rows_tds[1].innerText;
 
         Swal.fire({
-            title: '<strong>Diff confirmation</strong>',
+            title: '<strong>对比信息</strong>',
             type: 'info',
             html:
-                '<strong>Do you want to diff - </strong><br />' + escapeHtml(diff_first_name) +
-                '<br /> <strong>with - <br /> </strong>' + escapeHtml(diff_second_name) + ' <br /> <strong>?</strong>',
+                '<strong>你想要对比</strong><br />' + escapeHtml(diff_first_name) +
+                '<br /> <strong>和<br /> </strong>' + escapeHtml(diff_second_name) + ' <br /> <strong>吗?</strong>',
 
             showCancelButton: true,
-            cancelButtonText: 'Cancel',
-            confirmButtonText: 'Start Diffing!',
+            cancelButtonText: '取消',
+            confirmButtonText: '开始对比!',
         }).then((result) => {
             if (result.value) {
                 window.location = '/compare/' + diff_first_md5 + '/' + diff_second_md5 + '/';
@@ -407,12 +405,12 @@
 
     function delete_scan(item){
       Swal.fire({
-      title: 'Are you sure?',
-      text: "This will permanently remove the scan results from MobSF",
+      title: '确认？?',
+      text: "此删除是永久删除",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
       confirmButtonColor: '#d33',
       cancelButtonColor: '#2da532',
     }).then((result) => {
@@ -429,8 +427,8 @@
                             success : function(json) {
                                 if (json.deleted ==='yes'){
                                     Swal.fire(
-                                        'Deleted!',
-                                        'The scan result is deleted!',
+                                        '已删除!',
+                                        '本次扫描记录已删除!',
                                         'success'
                                     ).then(function () {
                                         location.reload();
@@ -438,7 +436,7 @@
                                 }
                                 else {
                                     Swal.fire(
-                                    'Delete Failed',
+                                    '删除失败',
                                     json.deleted,
                                     'error'
                                     )
@@ -446,7 +444,7 @@
                             },
                             error : function(xhr,errmsg,err) {
                                 Swal.fire(
-                                    'Delete Failed',
+                                    '删除失败',
                                     errmsg,
                                     'error'
                                     )

@@ -69,7 +69,7 @@
       type: 'warning',
       html: html,
       showCancelButton: true,
-      cancelButtonText: 'Cancel',
+      cancelButtonText: '取消',
       confirmButtonText: 'Suppress',
     }).then((result) => {
       if (result.value) {
@@ -95,8 +95,8 @@ function remove_suppression(ctx){
     type: 'warning',
     text: 'Do you want to delete the suppression rule?',
     showCancelButton: true,
-    cancelButtonText: 'Cancel',
-    confirmButtonText: 'Delete',
+    cancelButtonText: '取消',
+    confirmButtonText: '删除',
   }).then((result) => {
     if (result.value) {
       action(document.location.origin + delete_suppression_url, { checksum: hash, rule, kind, type }, function(json) {

@@ -223,13 +223,13 @@ def dynamic_analyzer(request, checksum, api=False):
                    'activities': activities,
                    'exported_activities': exported_activities,
                    'deeplinks': deeplinks,
-                   'title': 'Dynamic Analyzer'}
+                   'title': '动态分析'}
         template = 'dynamic_analysis/android/dynamic_analyzer.html'
         if api:
             return context
         return render(request, template, context)
     except Exception:
-        logger.exception('Dynamic Analyzer')
+        logger.exception('动态分析')
         return print_n_send_error_response(
             request,
             'Dynamic Analysis Failed.',

@@ -23,8 +23,8 @@ class FormUtil(object):
         example
         {
         "error": {
-            "file": "This field is required.",
-            "test": "This field is required."
+            "file": "请填写.",
+            "test": "请填写."
             }
         }
         """

@@ -85,7 +85,7 @@ def dynamic_analysis(request, api=False):
                    'dynamic_analyzer': corellium_auth,
                    'project_id': project_id,
                    'instances': instances,
-                   'title': 'MobSF Dynamic Analysis',
+                   'title': '动态分析',
                    'version': settings.MOBSF_VER}
         if api:
             return context
@@ -136,13 +136,13 @@ def dynamic_analyzer(request, api=False):
             'bundle_id': bundleid,
             'version': settings.MOBSF_VER,
             'form': form,
-            'title': 'iOS Dynamic Analyzer'}
+            'title': 'iOS 动态分析'}
         template = 'dynamic_analysis/ios/dynamic_analyzer.html'
         if api:
             return context
         return render(request, template, context)
     except Exception:
-        logger.exception('iOS Dynamic Analyzer')
+        logger.exception('iOS 动态分析')
         return print_n_send_error_response(
             request,
             'iOS Dynamic Analysis Failed.',

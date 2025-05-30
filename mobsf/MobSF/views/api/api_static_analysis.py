@@ -120,7 +120,7 @@ def api_tasks(request):
     resp = list_tasks(request, True)
     if not resp:
         return make_api_response(
-            {'error': 'Scan queue empty'}, 400)
+            {'error': '扫描队列是空的'}, 400)
     return make_api_response(resp, 200)
 
 

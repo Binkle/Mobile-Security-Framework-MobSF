@@ -560,7 +560,7 @@ def print_headers_of_filename(cd_h_of_file, local_header_of_file):
     :type local_header_of_file: dict
     """
     if not cd_h_of_file or not local_header_of_file:
-        print("Are you sure the filename exists?")
+        print("确认？ the filename exists?")
         return
     pretty_print_header("CENTRAL DIRECTORY")
     for k in cd_h_of_file:

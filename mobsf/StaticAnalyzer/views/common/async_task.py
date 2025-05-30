@@ -117,7 +117,7 @@ def async_analysis(checksum, api, file_name, func, *args, **kwargs):
         task_id=task_id,
         checksum=checksum,
         file_name=file_name[:254])
-    msg = f'Scan Queued with ID: {task_id}'
+    msg = f'扫描队列 ID: {task_id}'
     logger.info(msg)
     append_scan_status(checksum, msg)
     if api:

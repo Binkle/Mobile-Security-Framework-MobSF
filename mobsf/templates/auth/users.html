@@ -72,12 +72,12 @@ sidebar-collapse
 <script>
     function delete_user(item){
       Swal.fire({
-      title: 'Are you sure?',
+      title: '确认？?',
       text: "This will permanently remove the user from MobSF",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
       confirmButtonColor: '#d33',
       cancelButtonColor: '#2da532',
     }).then((result) => {
@@ -93,8 +93,8 @@ sidebar-collapse
                             success : function(json) {
                                 if (json.deleted==='yes'){
                                     Swal.fire(
-                                        'Deleted!',
-                                        'The user is deleted!',
+                                        '已删除!',
+                                        '用户已删除!',
                                         'success'
                                     ).then(function () {
                                         location.reload();
@@ -102,15 +102,15 @@ sidebar-collapse
                                 }
                                 else {
                                     Swal.fire(
-                                    'Delete Failed',
-                                    'Cannot delete the user',
+                                    '删除失败',
+                                    '不能删除当前用户',
                                     'error'
                                     )
                                 }
                             },
                             error : function(xhr,errmsg,err) {
                                 Swal.fire(
-                                    'Delete Failed',
+                                    '删除失败',
                                     errmsg,
                                     'error'
                                     )

@@ -30,7 +30,7 @@
               <div class="card-body">
                   <div class="row">
                      <div class="col-md-12">
-                        <h4>MobSF iOS Dynamic Analyzer</h4>
+                        <h4>iOS 动态分析</h4>
                         <div class="card-body">
                           <div class="table-responsive">
                            {% if not dynamic_analyzer %}<h5 style="color:#FFA500">Cannot authenticate with Corellium. Please ensure that <strong>MOBSF_CORELLIUM_API_KEY</strong> is configured.</h5>{% endif %}
@@ -428,12 +428,12 @@ function list_apps(){
 // Remove app from device
 function remove_app(item, bundle_id){
   Swal.fire({
-      title: 'Are you sure?',
+      title: '确认？?',
       text: "This will remove the app from the device",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
       confirmButtonColor: '#d33',
       cancelButtonColor: '#2da532',
     }).then((result) => {
@@ -481,12 +481,12 @@ function remove_app(item, bundle_id){
 // Start VM
 function start_vm(item){
       Swal.fire({
-      title: 'Are you sure?',
+      title: '确认？?',
       text: "This will start an iOS VM in Corellium and will incur charges",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
       confirmButtonColor: '#d33',
       cancelButtonColor: '#2da532',
     }).then((result) => {
@@ -534,12 +534,12 @@ function start_vm(item){
 // Stop VM
 function stop_vm(item){
       Swal.fire({
-      title: 'Are you sure?',
+      title: '确认？?',
       text: "This will stop an iOS VM in Corellium",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
       confirmButtonColor: '#d33',
       cancelButtonColor: '#2da532',
     }).then((result) => {
@@ -626,12 +626,12 @@ function unpause_vm(item){
 // Reboot VM
 function reboot_vm(item){
       Swal.fire({
-      title: 'Are you sure?',
+      title: '确认？?',
       text: "This will reboot the iOS VM in Corellium",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
       confirmButtonColor: '#d33',
       cancelButtonColor: '#2da532',
     }).then((result) => {
@@ -678,12 +678,12 @@ function reboot_vm(item){
 // Destroy VM
 function destroy_vm(item){
       Swal.fire({
-      title: 'Are you sure?',
+      title: '确认？?',
       text: "This will remove the iOS VM in Corellium",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
       confirmButtonColor: '#d33',
       cancelButtonColor: '#2da532',
     }).then((result) => {
@@ -730,12 +730,12 @@ function destroy_vm(item){
 // Create iOS VM
 $("#create_vm").click(function() {
   Swal.fire({
-      title: 'Are you sure?',
+      title: '确认？?',
       text: "This will create a new iOS VM in Corellium and will incur charges",
       type: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes',
-      cancelButtonText: 'No',
+      confirmButtonText: '确认',
+      cancelButtonText: '取消',
       confirmButtonColor: '#d33',
       cancelButtonColor: '#2da532',
     }).then((result) => {
